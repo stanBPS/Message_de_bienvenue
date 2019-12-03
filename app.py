@@ -23,3 +23,19 @@ def gestion_plusieurs_noms(chaineNom):
     for nom in nomTab:
         chaine = chaine+separator+nom
     return chaine
+
+def gestion_des_cris_plusieurs_noms(chaineNom):
+    nomTab = chaineNom.split(',')
+    separator = ", "
+    chaine_maj=""
+    chaine_minus=""
+    for nom in nomTab:
+        if nom.isupper():
+            chaine_maj=chaine_maj+separator+nom.strip()
+        else:
+            chaine_minus=chaine_minus+separator+nom.strip()
+    chaine= "Hello"+chaine_minus +". AND HELLO" +chaine_maj+" !"
+    return (chaine)
+
+
+
