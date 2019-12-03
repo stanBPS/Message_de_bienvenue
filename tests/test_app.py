@@ -10,3 +10,9 @@ def test_gestion_chaine_de_caractere_null():
     assert gestion_chaine_de_caractere_null(" ") == "Hello, my friend"
     assert gestion_chaine_de_caractere_null("Bob") == "Hello, Bob"
     assert gestion_chaine_de_caractere_null("    ") == "Hello, my friend"
+
+
+def test_gestion_des_cris():
+    assert gestion_des_cris("JERRY") == "HELLO, JERRY"
+    assert gestion_des_cris("jerry") == "Hello, Jerry"
+    assert gestion_des_cris(" ") == "Hello, my friend"
