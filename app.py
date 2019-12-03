@@ -15,3 +15,11 @@ def gestion_des_cris(nom):
         return ("HELLO, "+nom)
     else:
         return bonjour_1_prenom(nom)
+
+def gestion_plusieurs_noms(chaineNom):
+    nomTab = chaineNom.split(',')
+    chaine = "Hello"
+    separator = ", "
+    for nom in nomTab:
+        chaine = chaine+separator+nom
+    return chaine
