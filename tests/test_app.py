@@ -6,3 +6,7 @@ def test_bonjour_1_prenom():
     assert bonjour_1_prenom("stan") == "Hello, Stan"
     assert bonjour_1_prenom("mike") == "Hello, Mike"
 
+def test_gestion_chaine_de_caractere_null():
+    assert gestion_chaine_de_caractere_null(" ") == "Hello, my friend"
+    assert gestion_chaine_de_caractere_null("Bob") == "Hello, Bob"
+    assert gestion_chaine_de_caractere_null("    ") == "Hello, my friend"
