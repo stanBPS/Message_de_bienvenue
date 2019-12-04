@@ -34,3 +34,10 @@ def test_gestion_liste_avec_et():
     assert gestion_liste_avec_et("Bob, Amy, Jerry") == "Hello, Bob, Amy and Jerry"
     assert gestion_liste_avec_et("Bob,Amy,Jerry") == "Hello, Bob, Amy and Jerry"
     assert gestion_liste_avec_et("Bob, Amy") == "Hello, Bob and Amy"
+
+
+
+def test_gestion_virgules_dans_noms():
+    assert gestion_virgules_dans_noms("Bob, \"Amy, Jerry\"") ==  "Hello, Bob and Amy, Jerry"
+    assert gestion_virgules_dans_noms("\"Amy, Jerry\"") == "Hello, Amy, Jerry"
+    assert gestion_virgules_dans_noms("Bob, \"Amy, Jerry\", Mike, \"Stan, Pierre\"") == "Hello, Bob, Amy, Jerry, Mike, and Stan, Pierre"

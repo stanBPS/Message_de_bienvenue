@@ -50,3 +50,25 @@ def gestion_liste_avec_et(chaineNom):
             chaine = chaine+separator1+nom.strip()
     return chaine
 
+
+
+def gestion_virgules_dans_noms(chaineNom):
+    nomT = chaineNom.split('\"')
+    nomT.remove('')
+    chaine = "Hello"
+    separator1 = ", "
+    separator2 = " and "
+    i=0
+    for nom in nomT:
+        nom = nom.strip(', ')
+        nom = nom.replace(",", "")
+        nom = nom.replace(" ", ", ")
+        nomT[i]= nom
+        i = i+1
+
+    for nom in nomT:
+        print(nomT)
+
+
+
+
