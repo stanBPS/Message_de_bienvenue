@@ -38,4 +38,15 @@ def gestion_des_cris_plusieurs_noms(chaineNom):
     return (chaine)
 
 
+def gestion_liste_avec_et(chaineNom):
+    nomTab = chaineNom.split(',')
+    chaine="Hello"
+    separator1 = ", "
+    separator2 = " and "
+    for nom in nomTab:
+        if nomTab.index(nom) == len(nomTab)-1:
+            chaine = chaine+separator2+nom.strip()
+        else:
+            chaine = chaine+separator1+nom.strip()
+    return chaine
 

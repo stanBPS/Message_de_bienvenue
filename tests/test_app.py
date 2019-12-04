@@ -25,7 +25,12 @@ def test_gestion_plusieurs_noms():
     assert gestion_plusieurs_noms("Amy,Bob,Mike") == "Hello, Amy, Bob, Mike"
 
 
-
 def test_gestion_des_cris_plusieurs_noms():
     assert gestion_des_cris_plusieurs_noms("Amy, BOB, Mike") == "Hello, Amy, Mike. AND HELLO, BOB !"
     assert gestion_des_cris_plusieurs_noms("Amy,BOB,Mike") == "Hello, Amy, Mike. AND HELLO, BOB !"
+
+
+def test_gestion_liste_avec_et():
+    assert gestion_liste_avec_et("Bob, Amy, Jerry") == "Hello, Bob, Amy and Jerry"
+    assert gestion_liste_avec_et("Bob,Amy,Jerry") == "Hello, Bob, Amy and Jerry"
+    assert gestion_liste_avec_et("Bob, Amy") == "Hello, Bob and Amy"
